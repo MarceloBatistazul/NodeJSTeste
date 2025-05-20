@@ -59,3 +59,91 @@ Depois, você pode importar os métodos e usá-los como mostrado no exemplo.
 
 📝 Licença
 Este projeto está sob a licença MIT. 🤝
+
+
+
+
+
+🧪 Testando no Postman (Passo a Passo)
+💡 Certifique-se de que você criou uma API HTTP (ex: usando Express) para expor esses métodos. Se quiser, posso te ajudar com isso também.
+
+📍 Supondo que sua API esteja rodando em: http://localhost:3000/usuarios
+✅ 1. Listar todos os usuários
+Método: GET
+
+URL: http://localhost:3000/usuarios
+
+📥 Retorno esperado:
+json
+Copiar
+Editar
+[
+  {
+    "id": 1,
+    "nome": "João",
+    "email": "joao@email.com"
+  }
+]
+➕ 2. Adicionar novo usuário
+Método: POST
+
+URL: http://localhost:3000/usuarios
+
+Body (raw / JSON):
+
+json
+Copiar
+Editar
+{
+  "nome": "Maria",
+  "email": "maria@email.com"
+}
+📥 Retorno esperado:
+json
+Copiar
+Editar
+{
+  "id": 2,
+  "nome": "Maria",
+  "email": "maria@email.com"
+}
+🔍 3. Buscar usuário por ID
+Método: GET
+
+URL: http://localhost:3000/usuarios/2
+
+✏️ 4. Atualizar um usuário
+Método: PUT
+
+URL: http://localhost:3000/usuarios/2
+
+Body (raw / JSON):
+
+json
+Copiar
+Editar
+{
+  "nome": "Maria Silva",
+  "email": "maria.silva@email.com"
+}
+📥 Retorno esperado:
+json
+Copiar
+Editar
+{
+  "id": 2,
+  "nome": "Maria Silva",
+  "email": "maria.silva@email.com"
+}
+❌ 5. Deletar um usuário
+Método: DELETE
+
+URL: http://localhost:3000/usuarios/2
+
+📥 Retorno esperado:
+json
+Copiar
+Editar
+{
+  "mensagem": "Usuário removido com sucesso"
+}
