@@ -1,0 +1,61 @@
+# 👥 Gerenciador de Usuários - Node.js
+
+Este é um projeto simples em Node.js para gerenciar uma lista de usuários em memória. Ideal para testes, aprendizado ou como base para APIs REST simples.
+
+## 📦 Funcionalidades
+
+- 📋 Listar todos os usuários (`getUsuarios`)
+- 🔍 Buscar usuário por ID (`getUsuarioById`)
+- ➕ Adicionar novo usuário (`addUsuario`)
+- ✏️ Atualizar usuário existente (`updateUsuario`)
+- ❌ Deletar usuário (`deleteUsuario`)
+
+## 🧠 Como funciona?
+
+Os usuários são armazenados em um array em memória, com um ID gerado automaticamente a cada inserção.
+
+### 🧱 Estrutura de um usuário:
+
+```js
+{
+  id: 1,
+  nome: "Nome do Usuário",
+  email: "email@exemplo.com"
+}
+🚀 Exemplo de uso
+js
+Copiar
+Editar
+const {
+  getUsuarios,
+  getUsuarioById,
+  addUsuario,
+  updateUsuario,
+  deleteUsuario
+} = require('./usuarios');
+
+// Adicionando usuário
+const novo = addUsuario({ nome: 'João', email: 'joao@email.com' });
+
+// Buscando por ID
+const encontrado = getUsuarioById(novo.id);
+
+// Atualizando usuário
+const atualizado = updateUsuario(novo.id, { nome: 'João Silva', email: 'joao.silva@email.com' });
+
+// Deletando usuário
+const sucesso = deleteUsuario(novo.id);
+🔧 Requisitos
+Node.js instalado
+
+📁 Como executar
+bash
+Copiar
+Editar
+git clone https://github.com/seu-usuario/nome-do-repo.git
+cd nome-do-repo
+npm install
+Depois, você pode importar os métodos e usá-los como mostrado no exemplo.
+
+📝 Licença
+Este projeto está sob a licença MIT. 🤝
